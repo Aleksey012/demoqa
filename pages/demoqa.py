@@ -11,8 +11,6 @@ class DemoQa(BasePage):
         self.icon = WebElement(driver, '#app >header > a')
         self.btn_elements = WebElement(driver, '#app > div > div > div.home-body > div > div:nth-child(1)')
         super().__init__(driver, self.base_url)
-        self.toolsqa = WebElement(driver, '#app > footer > span')
-        self.centrqa = WebElement(driver, '//*[@id="app"]/div/div/div[2]/div[2]')
 
     # def exist_icon(self):
     #     try:
