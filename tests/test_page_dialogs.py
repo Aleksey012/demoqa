@@ -18,5 +18,5 @@ def test_navigation_modal(browser):
     browser.set_window_size(width=900, height=400)
     elements_page.forward()
     assert demoqa_page.equal_url()
-    assert browser.title == 'DEMOQA'
+    assert browser.title == demoqa_page.pageData['title']
     browser.set_window_size(width=1000, height=1000)

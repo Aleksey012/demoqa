@@ -7,12 +7,17 @@ def test_login_form(browser):
     form.visit()
     assert not form.modal_dialog.exist()
     time.sleep(2)
-    form.first_name.send_keys('tester')
-    form.last_name.send_keys('testerovich')
-    form.user_email.send_keys('test@ttt.tt')
-    form.gender_radio_1.click()
-    form.user_number.send_keys('6666666666666')
+    form.first_name.send_keys('Aleksey')
+    form.last_name.send_keys('Yakovlev')
+    form.user_email.send_keys('aleksey1334@mail.ru')
+    form.gender_radio_1.click_force()
+    form.user_number.send_keys('89213549993')
+    form.hobbies.click_force()
+    form.Current_Addres.send_keys('sjfhnfnvdjnxsvdkjsdvnb')
     time.sleep(2)
-    form.btn_submit.click()
+    form.btn_submit.click_force()
     time.sleep(2)
+    assert form.modal_dialog.exist()
+
+
 
