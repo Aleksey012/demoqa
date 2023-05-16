@@ -42,6 +42,10 @@ class WebElement:
     def click_force(self):
         self.driver.execute_script('arguments[0].click();', self.find_element())
 
+    def click_clikle(self):
+        for i in range(4):
+            self.find_element().click()
+
     def clear(self):
         self.find_element().send_keys(Keys.CONTROL + 'a')
         self.find_element().send_keys(Keys.DELETE)
@@ -78,3 +82,6 @@ class WebElement:
             'window.scrollTo(0, document.body.scrollHeight);',
             self.find_element()
         )
+
+    def check_css(self, style, value=''):
+        return self.find_element().value_of_css_property(style) == value
