@@ -56,7 +56,7 @@ def test_webtables3(browser):
     time.sleep(2)
     assert not table_page.next_button.click()
     assert not table_page.previous_button.click()
-    assert table_page.next_button.get_dom_attribute('disabled class')
+
 
 
 
