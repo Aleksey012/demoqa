@@ -9,10 +9,17 @@ class DemoQa(BasePage):
         self.pageData = {
             'title': 'DEMOQA'
         }
-        self.base_url = 'https://demoqa.com/'
+        self.base_url = 'https://demoqa.com/radio-button'
         self.icon = WebElement(driver, '#app >header > a')
         self.btn_elements = WebElement(driver, '#app > div > div > div.home-body > div > div:nth-child(1)')
         super().__init__(driver, self.base_url)
+        self.h5 = WebElement(driver, 'div > h5')
+        self.yes = WebElement(driver, '#yesRadio')
+        self.impressive = WebElement(driver, '#impressiveRadio')
+        self.no = WebElement(driver, '#noRadio')
+        self.txt = WebElement(driver, 'div:nth-child(2) > p > span')
+
+
 
     # def exist_icon(self):
     #     try:
